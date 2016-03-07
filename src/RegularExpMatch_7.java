@@ -8,7 +8,9 @@ public class RegularExpMatch_7 {
         try {
             RegularExpMatch_7 reExpMatch = new RegularExpMatch_7();
             boolean match = reExpMatch.isMatch(str,pattern);
-            System.out.print("match result:" + match);
+            System.out.println("match result:" + match);
+
+            reExpMatch.subStringTest();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,6 +54,15 @@ public class RegularExpMatch_7 {
                 i++;
             }
             return false;
+        }
+    }
+
+    public void subStringTest(){
+        try {
+            String str = "abcd";
+            System.out.print("subString:" + str.substring(4));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
