@@ -12,6 +12,7 @@ public class Roman2Integer_13 {
         System.out.print(ri.romanToInt(romanStr));
     }
 
+    
     public int romanToInt(String s) {
         int result = 0;
         char[] charArray = s.toCharArray();
