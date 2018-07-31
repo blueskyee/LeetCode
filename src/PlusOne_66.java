@@ -1,4 +1,7 @@
 import com.sun.org.apache.xpath.internal.operations.Plus;
+import com.sun.tools.javac.code.Attribute;
+
+import java.util.Arrays;
 
 /**
  * Created by henry on 2018/7/31.
@@ -7,7 +10,7 @@ public class PlusOne_66 {
     public static void main(String[] args){
         int[] digits = {9};
         PlusOne_66 po = new PlusOne_66();
-        System.out.println(po.plusOne(digits));
+        System.out.println(Arrays.toString(po.plusOne(digits)));
     }
 
     public int[] plusOne(int[] digits) {
