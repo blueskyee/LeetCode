@@ -5,9 +5,9 @@ import com.sun.org.apache.xpath.internal.operations.Plus;
  */
 public class PlusOne_66 {
     public static void main(String[] args){
-        int[] nums = {9};
+        int[] digits = {9};
         PlusOne_66 po = new PlusOne_66();
-        System.out.println(po.plusOne(nums));
+        System.out.println(po.plusOne(digits));
     }
 
     public int[] plusOne(int[] digits) {
