@@ -21,4 +21,15 @@ public class TreeNode {
         return root;
     }
 
+    static public TreeNode createSampleTree2() throws Exception{
+        TreeNode root = new TreeNode(0);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(2);
+
+        root.left.left = new TreeNode(3);
+        root.right.right = new TreeNode(6);
+
+        return root;
+    }
+
 }
