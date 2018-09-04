@@ -55,6 +55,7 @@ public class PathSum_29 {
         if(root.left==null && root.right==null && currValue==sum){
             return true;
         }
+        //assume all values are positive
         if(currValue>sum){
             return false;
         }
