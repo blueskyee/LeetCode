@@ -23,7 +23,7 @@ public class AddStrings_415 {
         return sb.reverse().toString();
     }
 
-    public String addStrings_2020(String num1, String num2) {
+/*    public String addStrings_2020(String num1, String num2) {
         StringBuilder sb = new StringBuilder();
         int carry = 0;
         for(int i=num1.length()-1,j=num2.length()-1; i>=0 || j>=0; i--,j--){
@@ -37,5 +37,5 @@ public class AddStrings_415 {
         }
 
         return sb.reverse().toString();
-    }
+    }*/
 }
