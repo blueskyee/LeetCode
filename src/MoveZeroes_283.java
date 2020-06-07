@@ -9,6 +9,18 @@ public class MoveZeroes_283 {
     }
 
     public void moveZeroes(int[] nums) {
+        int idx = 0;
+        for(int i=0; i<nums.length; i++){
+            if(nums[i] != 0){
+                nums[idx++] = nums[i];
+            }
+        }
+        for(int i=idx; i<nums.length; i++){
+            nums[i] = 0;
+        }
+    }
+
+/*    public void moveZeroes(int[] nums) {
         int pos = 0;
         for(int i=0; i<nums.length; i++){
             if(nums[i] != 0)
@@ -17,5 +29,5 @@ public class MoveZeroes_283 {
         for(int i=pos; i<nums.length; i++){
             nums[i] = 0;
         }
-    }
+    }*/
 }
