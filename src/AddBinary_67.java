@@ -11,7 +11,24 @@ public class AddBinary_67 {
     }
 
     public String addBinary(String a, String b) {
-        int aLen = a.length();
+        StringBuilder sb = new StringBuilder();
+        int carry = 0;
+        for(int i=a.length()-1,j=b.length()-1; i>=0 || j>=0; i--,j--){
+            int sum = carry;
+            if(i >= 0)
+                sum += a.charAt(i) - '0';
+            if(j >= 0)
+                sum += b.charAt(j) - '0';
+            sb.append(sum % 2);
+            carry = sum / 2;
+        }
+
+        if(carry == 1)
+            sb.append('1');
+        return sb.reverse().toString();
+
+        //brute force version
+        /*int aLen = a.length();
         int bLen = b.length();
 
         StringBuilder sb = new StringBuilder();
@@ -87,6 +104,6 @@ public class AddBinary_67 {
                 sb.append('1');
         }
 
-        return sb.reverse().toString();
+        return sb.reverse().toString();*/
     }
 }
