@@ -1,3 +1,5 @@
+import apple.laf.JRSUIUtils;
+
 /**
  * Created by blueskyee on 2016/2/23.
  */
@@ -40,6 +42,19 @@ public class TreeNode {
         root.left.right = new TreeNode(4);
         root.right.left = new TreeNode(4);
         root.right.right = new TreeNode(3);
+
+        return root;
+    }
+
+    static public TreeNode createBST() throws Exception{
+        TreeNode root = new TreeNode(10);
+        root.left = new TreeNode(5);
+        root.right= new TreeNode(15);
+
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(7);
+
+        root.right.right = new TreeNode(18);
 
         return root;
     }
