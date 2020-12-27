@@ -28,7 +28,7 @@ public class CloneGraph_133 {
     }
 
     //DFS:
-    //need a mpa to record which node has been clone
+    //need a map to record which node has been clone
     private Node dfs(Node node, Map<Integer, Node> map){
         if(node == null) return null;
 
@@ -44,9 +44,12 @@ public class CloneGraph_133 {
             return newNode;
         }
     }
-    
+
     //BFS:
     //need a map to record which node has been clone, and a queue to bfs create neighbors
+    //   note: queue add vs. offer & remove vs. poll
+    //      offer, poll return false, null when violating capacity restrictions -> 預期可能超過容量使用
+    //      add, remove throw exception when violating capacity restrictions or null -> 不預期超過容量或空值使用
     private Node bfs(Node node){
         if(node == null) return null;
 
@@ -55,7 +58,7 @@ public class CloneGraph_133 {
 
         Node newNode = new Node(node.val);
         map.put(node.val, newNode);
-        queue.add(node);
+        queue.offer(node);
 
         while(!queue.isEmpty()){
             Node curNode = queue.poll();
