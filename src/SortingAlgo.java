@@ -90,4 +90,46 @@ public class SortingAlgo {
 
     }
 
+
+    //heap sort
+    //ref: https://www.geeksforgeeks.org/heap-sort/
+    public static void heapSort(int[] number){
+        if(number == null || number.length < 2)
+            return;
+
+        //build max heap
+        int n = number.length;
+        for(int i = n / 2 - 1; i >= 0; i--){
+            heapify(number, n, i);
+        }
+        //swap root (max value) to last element
+        for(int i = n - 1; i > 0; i--){
+            swap(number, 0, i);
+            heapify(number, i, 0);
+        }
+    }
+
+    //heapify function make max heap sub-tree from node i
+    private static void heapify(int[] number, int n, int i){
+        //step1: compare node i with 2 child nodes
+        int lChild = 2 * i + 1;
+        int rChild = 2 * i + 2;
+        int largest = i;
+
+        if(lChild < n && number[lChild] > number[largest]){
+            largest = lChild;
+        }
+
+        if(rChild < n && number[rChild] > number[largest]){
+            largest = rChild;
+        }
+
+        //step2.1: swap node i with child node if child node's value is bigger than i
+        //step2.2: recursive heapify sub-tree if step2.1 occur
+        if(largest != i){
+            swap(number, i, largest);
+            heapify(number, n, largest);
+        }
+    }
+
 }
