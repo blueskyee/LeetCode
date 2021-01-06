@@ -150,4 +150,25 @@ public class SortingAlgo {
         }
     }
 
+
+    //selection sort
+    //ref: https://www.javatpoint.com/selection-sort-in-java
+    public static void selectionSort(int[] number){
+        if (number == null || number.length < 2)
+            return;
+
+        for(int i = 0; i < number.length - 1; i++){
+            int idx = i;
+            for(int j = i + 1; j < number.length; j++){
+                if(number[j] < number[idx]){
+                    idx = j;
+                }
+            }
+
+            int smallNumber = number[idx];
+            number[idx] = number[i];
+            number[i] = smallNumber;
+        }
+    }
+
 }
