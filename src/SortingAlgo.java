@@ -90,6 +90,33 @@ public class SortingAlgo {
 
     }
 
+    //in place merge sort, space: O(1)
+    private static void inPlaceMerge(int[] number, int left, int mid, int right) {
+        //step1: index the beginning of both sub array
+        int start1 = left;
+        int start2 = mid + 1;
+
+        //edge case: two sub array are sorted
+        if(number[mid] <= number[start2])
+            return;
+
+        //step2: compare the values of both indices, swap the value if 2nd sub array value is less than the 1st
+        while(start1 <= mid && start2 <= right){
+            if(number[start1] <= number[start2]){
+                start1++;
+                continue;
+            }else{
+                for(int i = start2; i > start1; i--){
+                    number[i] = number[i - 1];
+                }
+                number[start1] = number[start2];
+                start1++;
+                start2++;
+                mid++;
+            }
+        }
+    }
+
 
     //heap sort
     //ref: https://www.geeksforgeeks.org/heap-sort/
