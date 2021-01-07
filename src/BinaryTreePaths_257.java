@@ -6,7 +6,7 @@ import java.util.List;
  */
 public class BinaryTreePaths_257 {
     static public void main(String[] args) throws Exception {
-        TreeNode tn = TreeNode.createBST();
+        _TreeNode tn = _TreeNode.createBST();
         BinaryTreePaths_257 btp = new BinaryTreePaths_257();
         List<String> result = btp.binaryTreePaths(tn);
         for(int i=0; i<result.size(); i++){
@@ -14,14 +14,14 @@ public class BinaryTreePaths_257 {
         }
     }
 
-    public List<String> binaryTreePaths(TreeNode root) {
+    public List<String> binaryTreePaths(_TreeNode root) {
         List<String> result = new ArrayList<String>();
         if(root != null)
             buildPaths(root, "", result);
         return result;
     }
 
-    private void buildPaths(TreeNode root, String curPath, List<String> result) {
+    private void buildPaths(_TreeNode root, String curPath, List<String> result) {
         curPath = curPath + "->" + root.val;
         if(root.left == null && root.right == null){
             result.add(curPath.substring(2));

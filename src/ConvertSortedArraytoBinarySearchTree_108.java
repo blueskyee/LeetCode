@@ -9,17 +9,17 @@ public class ConvertSortedArraytoBinarySearchTree_108 {
         System.out.println(csa.sortedArrayToBST(input));
     }
 
-    public TreeNode sortedArrayToBST(int[] nums) {
-        TreeNode tn = buildTree(nums, 0, nums.length-1);
+    public _TreeNode sortedArrayToBST(int[] nums) {
+        _TreeNode tn = buildTree(nums, 0, nums.length-1);
         return tn;
     }
 
-    private static TreeNode buildTree(int[] nums, int low, int high){
+    private static _TreeNode buildTree(int[] nums, int low, int high){
         if(low > high){
             return null;
         }
         int mid = (low + high) / 2;
-        TreeNode tn = new TreeNode(nums[mid]);
+        _TreeNode tn = new _TreeNode(nums[mid]);
         tn.left = buildTree(nums, low, mid-1);
         tn.right = buildTree(nums, mid+1, high);
         return tn;

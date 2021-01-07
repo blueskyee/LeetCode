@@ -9,14 +9,14 @@ public class PathSumII_113 {
 
     }
 
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public List<List<Integer>> pathSum(_TreeNode root, int sum) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> cur = new ArrayList<>();
         dfs(root, sum, cur, res);
         return res;
     }
 
-    private void dfs(TreeNode root, int sum, List<Integer> cur, List<List<Integer>> res){
+    private void dfs(_TreeNode root, int sum, List<Integer> cur, List<List<Integer>> res){
         if(root == null) return;
         cur.add(root.val);
         if(root.left==null && root.right==null && sum-root.val==0){

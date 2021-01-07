@@ -4,8 +4,8 @@
 public class SameTree_100 {
     public static void main(String[] args){
         try {
-            TreeNode n1 = TreeNode.createSampleTree();
-            TreeNode n2 = TreeNode.createSampleTree2();
+            _TreeNode n1 = _TreeNode.createSampleTree();
+            _TreeNode n2 = _TreeNode.createSampleTree2();
             SameTree_100 nt = new SameTree_100();
             System.out.println(nt.isSameTree(n1, n2));
         } catch (Exception e) {
@@ -13,7 +13,7 @@ public class SameTree_100 {
         }
     }
 
-    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree(_TreeNode p, _TreeNode q) {
         if(p==null || q==null){
             return (p==null && q==null);
         }else{
@@ -24,7 +24,7 @@ public class SameTree_100 {
         }
     }
 
-/*    public boolean isSameTree(TreeNode p, TreeNode q) {
+/*    public boolean isSameTree(_TreeNode p, _TreeNode q) {
         if(p==null || q==null )
             return (p==null && q==null);
         else{

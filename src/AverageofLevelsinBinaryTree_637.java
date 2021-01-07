@@ -8,7 +8,7 @@ import java.util.Queue;
  */
 public class AverageofLevelsinBinaryTree_637 {
     static public void main(String[] args) throws Exception {
-        TreeNode tn = TreeNode.createBST();
+        _TreeNode tn = _TreeNode.createBST();
         AverageofLevelsinBinaryTree_637 albt = new AverageofLevelsinBinaryTree_637();
         List<Double> result = albt.averageOfLevels(tn);
         for(Double d:result){
@@ -16,9 +16,9 @@ public class AverageofLevelsinBinaryTree_637 {
         }
     }
 
-    public List<Double> averageOfLevels(TreeNode root) {
+    public List<Double> averageOfLevels(_TreeNode root) {
         List<Double> result = new ArrayList<Double>();
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<_TreeNode> queue = new LinkedList<_TreeNode>();
 
         if(root == null) return result;
         queue.add(root);
@@ -26,7 +26,7 @@ public class AverageofLevelsinBinaryTree_637 {
             int nodeNum = queue.size();
             Double sum = 0.0;
             for(int i=0; i<nodeNum; i++){
-                TreeNode t = queue.poll();
+                _TreeNode t = queue.poll();
                 sum += t.val;
                 if(t.left != null) queue.offer(t.left);
                 if(t.right != null) queue.offer(t.right);

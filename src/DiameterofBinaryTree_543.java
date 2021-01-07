@@ -4,7 +4,7 @@
 public class DiameterofBinaryTree_543 {
     public static void main(String[] args){
         try {
-            TreeNode tr = TreeNode.createSampleTree();
+            _TreeNode tr = _TreeNode.createSampleTree();
             DiameterofBinaryTree_543 db = new DiameterofBinaryTree_543();
             System.out.println(db.diameterOfBinaryTree(tr));
         } catch (Exception e) {
@@ -12,7 +12,7 @@ public class DiameterofBinaryTree_543 {
         }
     }
 
-    public int diameterOfBinaryTree(TreeNode root) {
+    public int diameterOfBinaryTree(_TreeNode root) {
         if(root == null) return 0;
 
         int localDist = maxDepth(root.left) + maxDepth(root.right);
@@ -22,7 +22,7 @@ public class DiameterofBinaryTree_543 {
         return Math.max(localDist, Math.max(leftLocalDist, rightLocalDist));
     }
 
-    private int maxDepth(TreeNode root) {
+    private int maxDepth(_TreeNode root) {
         if(root == null) return 0;
         return 1+Math.max(maxDepth(root.left),
                           maxDepth(root.right));

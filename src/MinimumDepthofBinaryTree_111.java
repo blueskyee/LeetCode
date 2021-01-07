@@ -4,7 +4,7 @@
 public class MinimumDepthofBinaryTree_111 {
     public static void main(String[] args){
         try {
-            TreeNode tn = TreeNode.createBST();
+            _TreeNode tn = _TreeNode.createBST();
             MinimumDepthofBinaryTree_111 md = new MinimumDepthofBinaryTree_111();
             System.out.println(md.minDepth(tn));
         } catch (Exception e) {
@@ -12,7 +12,7 @@ public class MinimumDepthofBinaryTree_111 {
         }
     }
 
-    public int minDepth(TreeNode root) {
+    public int minDepth(_TreeNode root) {
         if(root == null) return 0;
         int leftDep = minDepth(root.left);
         int rightDep = minDepth(root.right);
