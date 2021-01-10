@@ -6,12 +6,12 @@ public class IntersectionofTwoLinkedLists_160 {
 
     }
 
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public _ListNode getIntersectionNode(_ListNode headA, _ListNode headB) {
         if(headA == null || headB == null)
             return null;
 
-        ListNode a = headA;
-        ListNode b = headB;
+        _ListNode a = headA;
+        _ListNode b = headB;
         while (a != b){
             a = a == null ? headB : a.next;
             b = b == null ? headA : b.next;

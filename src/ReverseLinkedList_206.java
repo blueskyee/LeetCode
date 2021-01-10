@@ -4,23 +4,23 @@
 public class ReverseLinkedList_206 {
 
     public static void main(String[] args){
-        ListNode n5 = new ListNode(5);
-        ListNode n4 = new ListNode(4,n5);
-        ListNode n3 = new ListNode(3,n4);
-        ListNode n2 = new ListNode(2,n3);
-        ListNode n1 = new ListNode(1,n2);
+        _ListNode n5 = new _ListNode(5);
+        _ListNode n4 = new _ListNode(4,n5);
+        _ListNode n3 = new _ListNode(3,n4);
+        _ListNode n2 = new _ListNode(2,n3);
+        _ListNode n1 = new _ListNode(1,n2);
 
         ReverseLinkedList_206 rl = new ReverseLinkedList_206();
-        ListNode reveredList = rl.reverseList(n1);
+        _ListNode reveredList = rl.reverseList(n1);
     }
 
-    public ListNode reverseList(ListNode head) {
+    public _ListNode reverseList(_ListNode head) {
         if(head == null || head.next == null)
             return head;
 
-        ListNode pre = head;
-        ListNode cur = head.next;
-        ListNode next;
+        _ListNode pre = head;
+        _ListNode cur = head.next;
+        _ListNode next;
         while(cur != null){
             next = cur.next;
             cur.next = pre;

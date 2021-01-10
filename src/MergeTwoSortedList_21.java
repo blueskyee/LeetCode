@@ -3,12 +3,12 @@
  */
 public class MergeTwoSortedList_21 {
 
-    public ListNode mergeTwoLists ( ListNode l1 , ListNode l2 ) {
-        ListNode p1 = l1;
-        ListNode p2 = l2;
+    public _ListNode mergeTwoLists (_ListNode l1 , _ListNode l2 ) {
+        _ListNode p1 = l1;
+        _ListNode p2 = l2;
 
-        ListNode newHead = new ListNode(0);
-        ListNode p = newHead;
+        _ListNode newHead = new _ListNode(0);
+        _ListNode p = newHead;
 
         while (p1!=null && p2!=null){
             if(p1.val < p2.val){
