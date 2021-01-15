@@ -31,4 +31,13 @@ public class ReverseLinkedList_206 {
         head.next = null;
         return pre;
     }
+
+    public _ListNode reverseListRecursive(_ListNode head) {
+        if(head == null || head.next == null)
+            return head;
+        _ListNode p = reverseListRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
+    }
 }
