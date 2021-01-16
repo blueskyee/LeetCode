@@ -9,7 +9,27 @@ public class RemoveNthNodeFromEndofList_19 {
         rl.reverseList(listHead);
     }
 
+    //one pass solution
     public _ListNode removeNthFromEnd(_ListNode head, int n) {
+        //use two pointers, first ahead n step from second
+        if(head == null) return head;
+        _ListNode res = new _ListNode(0);
+        res.next = head;
+        _ListNode p1 = res;
+        _ListNode p2 = res;
+        for(int i = 0; i < n; i++){
+            p1 = p1.next;
+        }
+        while(p1.next != null){
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        p2.next = p2.next.next;
+        return res.next;
+    }
+
+    //two pass solution
+    /*public _ListNode removeNthFromEnd(_ListNode head, int n) {
         //1: find the length of list(l)
         //2: remove the (l-n+1) th node
         if(head == null)
@@ -32,5 +52,5 @@ public class RemoveNthNodeFromEndofList_19 {
         temp.next = temp.next.next;
 
         return start.next;
-    }
+    }*/
 }
