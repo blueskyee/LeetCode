@@ -21,7 +21,7 @@ public class WordBreak_139 {
                     res[i] = true;
             }
         }
-        return res[s.length() + 1];
+        return res[s.length()];
     }
 
     //brute force
