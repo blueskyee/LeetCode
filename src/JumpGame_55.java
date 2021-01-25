@@ -8,7 +8,18 @@ public class JumpGame_55 {
         System.out.println(jg.canJump(nums));
     }
 
+    //greedy
     public boolean canJump(int[] nums) {
+        int maxLoc = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(maxLoc < i) return false;
+            maxLoc = maxLoc < (i + nums[i]) ? (i + nums[i]) : maxLoc;
+        }
+        return true;
+    }
+
+    //dp
+    /*public boolean canJump(int[] nums) {
         if(nums == null || nums.length == 0) return false;
         boolean[] dp = new boolean[nums.length];
 
@@ -22,5 +33,5 @@ public class JumpGame_55 {
             }
         }
         return dp[nums.length - 1];
-    }
+    }*/
 }
