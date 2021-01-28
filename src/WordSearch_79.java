@@ -20,8 +20,7 @@ public class WordSearch_79 {
         return false;
     }
 
-    private boolean helper(char[][] board, String word, int row, int col,
-                           int wordIdx){
+    private boolean helper(char[][] board, String word, int row, int col, int wordIdx){
         if(wordIdx == word.length())
             return true;
         if(row < 0 || row >= board.length || col < 0 || col >= board[0].length)
