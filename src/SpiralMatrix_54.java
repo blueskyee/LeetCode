@@ -22,10 +22,9 @@ public class SpiralMatrix_54 {
     private List<Integer> helper(int[][] matrix, int i, int j,
                                  int moveIdx, boolean[][] visit,
                                  List<Integer> res){
-        if(!visit[i][j]){
-            res.add(matrix[i][j]);
-            visit[i][j] = true;
-        }
+        res.add(matrix[i][j]);
+        visit[i][j] = true;
+
         if(needChangeDir(matrix, visit, i, j, moveIdx) &&
                 canChangeDir(matrix, visit, i, j, moveIdx)){
             int newMoveIdx = (moveIdx + 1) % 4;
