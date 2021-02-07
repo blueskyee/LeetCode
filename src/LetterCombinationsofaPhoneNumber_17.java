@@ -13,8 +13,6 @@ public class LetterCombinationsofaPhoneNumber_17 {
     }
 
     public List<String> letterCombinations(String digits) {
-        if(digits.isEmpty()) return null;
-
         List<List<Character>> letters = new ArrayList<>();
         letters.add(Arrays.asList('a','b','c'));
         letters.add(Arrays.asList('d','e','f'));
@@ -27,6 +25,7 @@ public class LetterCombinationsofaPhoneNumber_17 {
 
         StringBuilder sb = new StringBuilder();
         List<String> res = new ArrayList<>();
+        if(digits.isEmpty()) return res;
         getCombinations(digits, sb, res, letters);
         return res;
     }
