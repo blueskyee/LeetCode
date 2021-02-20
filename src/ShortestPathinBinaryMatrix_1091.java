@@ -57,7 +57,7 @@ public class ShortestPathinBinaryMatrix_1091 {
         return steps == Integer.MAX_VALUE ? -1 : steps;
     }
 
-    int[][] neighbors = {{1,0},{1,1},{0,1},{-1,1},{-1,0},{-1,-1},{0,-1},{1,1}};
+    int[][] neighbors = {{1,0},{1,1},{0,1},{-1,1},{-1,0},{-1,-1},{0,-1},{1,-1}};
     private int helper(int[][] grid, int i, int j, int steps){
         if(grid[i][j] == 1)
             return Integer.MAX_VALUE;
