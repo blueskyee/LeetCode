@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by henry on 2021/2/27.
  */
@@ -8,8 +11,19 @@ public class FindtheDuplicateNumber_287 {
         System.out.println(fd.findDuplicate(nums));
     }
 
-    //https://leetcode.com/problems/find-the-duplicate-number/discuss/72846/My-easy-understood-solution-with-O(n)-time-and-O(1)-space-without-modifying-the-array.-With-clear-explanation.
     public int findDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for(int num: nums){
+            if(set.contains(num)){
+                return num;
+            }
+            set.add(num);
+        }
+        return -1;
+    }
+
+    //https://leetcode.com/problems/find-the-duplicate-number/discuss/72846/My-easy-understood-solution-with-O(n)-time-and-O(1)-space-without-modifying-the-array.-With-clear-explanation.
+    /*public int findDuplicate(int[] nums) {
         int slow = nums[0];
         int fast = nums[nums[0]];
         while (fast != slow){
@@ -23,5 +37,5 @@ public class FindtheDuplicateNumber_287 {
             fast = nums[fast];
         }
         return slow;
-    }
+    }*/
 }
