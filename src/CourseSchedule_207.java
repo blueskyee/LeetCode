@@ -20,7 +20,7 @@ public class CourseSchedule_207 {
             int curCourse = prerequisites[i][0];
             int preCourse = prerequisites[i][1];
             matric[curCourse][preCourse] = 1;
-            inDegrees[preCourse]++;
+            inDegrees[curCourse]++;
         }
 
         Queue<Integer> queue = new LinkedList<Integer>();
@@ -34,7 +34,7 @@ public class CourseSchedule_207 {
             int course = queue.poll();
             count++;
             for(int i=0; i<matric[course].length; i++){
-                if(matric[course][i] == 1){
+                if(matric[i][course] == 1){
                     if(--inDegrees[i] == 0){
                         queue.offer(i);
                     }
