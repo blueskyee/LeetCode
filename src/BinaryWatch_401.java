@@ -11,7 +11,8 @@ public class BinaryWatch_401 {
         for(int h = 0; h < 12; h++){
             for(int m = 0; m < 60; m++){
                 if(Integer.bitCount(h) + Integer.bitCount(m) == num){
-                    res.add(Integer.toString(h) + ":" + (m < 10 ? "0" + Integer.toString(m) : Integer.toString(m)));
+                    res.add(Integer.toString(h) + ":" +
+                            (m < 10 ? "0" + Integer.toString(m) : Integer.toString(m)));
                 }
             }
         }
