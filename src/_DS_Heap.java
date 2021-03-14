@@ -1,3 +1,7 @@
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.PriorityQueue;
+
 /**
  * Created by henry on 2021/3/14.
  */
@@ -79,6 +83,31 @@ public class _DS_Heap {
             minHeapify(FRONT);
             return minVal;
         }
+    }
 
+    public static void main(String[] args){
+        //We use PriorityQueue class to implement Heaps in Java.
+        // By default Min Heap is implemented by this class.
+        PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>();
+
+        pQueue.add(10);
+        pQueue.add(30);
+        pQueue.add(20);
+        pQueue.add(400);
+
+        Iterator itr = pQueue.iterator();
+        while (itr.hasNext())
+            System.out.println(itr.next());
+
+        pQueue.poll();
+        Iterator<Integer> itr2 = pQueue.iterator();
+        while (itr2.hasNext())
+            System.out.println(itr2.next());
+        pQueue.remove(30);
+        boolean b = pQueue.contains(20);
+
+        //Max Heap:
+        PriorityQueue<Integer> maxQueue =
+                new PriorityQueue<Integer>(Collections.reverseOrder());
     }
 }
