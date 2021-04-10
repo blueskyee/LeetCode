@@ -108,10 +108,11 @@ public class _SortingAlgo {
                 start1++;
                 continue;
             }else{
+                int cur2 = number[start2];
                 for(int i = start2; i > start1; i--){
                     number[i] = number[i - 1];
                 }
-                number[start1] = number[start2];
+                number[start1] = cur2;
                 start1++;
                 start2++;
                 mid++;
