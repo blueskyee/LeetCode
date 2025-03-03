@@ -31,6 +31,8 @@ public class FindAllAnagramsinaString_438 {
                     start++;
             }
         }
+
+        return null;
     }
 
     //time limit exceeded
