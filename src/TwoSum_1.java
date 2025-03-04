@@ -19,7 +19,6 @@ public class TwoSum_1 {
                     return new int[] {i,j};
             }
         }
-
         
         return null;
     }
